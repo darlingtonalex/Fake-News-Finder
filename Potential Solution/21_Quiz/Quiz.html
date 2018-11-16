@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Quiz</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+		<link href="quiz.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="quizContainer" class="container">
+			<div class="title">Computer Quiz</div>
+			<div id="question" class="question"></div>
+			<img id="questionImage" src="./11.jpg">
+			<label class="option"><input type="radio" name="option" value="1" /> <span id="opt1"></span></label>
+			<label class="option"><input type="radio" name="option" value="2" /> <span id="opt2"></span></label>
+			<button id="nextButton" class="next-btn" onclick="document.getElementById('questionImage').src='./21.png'">Next Question</button>
+		</div>
+		<div id="result" class="container result" style="display:none;">
+		</div>
+		<script src="question.js"></script>
+		<script src="quiz-script.js"></script>
+	</body>
+</html>

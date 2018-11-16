@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Quiz</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+		<link href="quiz.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="quizContainer" class="container">
+			<div class="title">Fake News Quiz</div>
+			<div id="question" class="question"></div>
+			<img class ="center" id="questionImage" src="./images/11.png">
+			<label class="option">Real News<input type="radio" name="option" value="1" /> <span id="opt1"></span></label>
+			<label class="option">Fake News<input type="radio" name="option" value="2" /> <span id="opt2"></span></label>
+			<button id="nextButton" class="next-btn" onclick="updatePage()">Next Question</button>
+			<h3 id =answer></h3>
+		</div>
+		<div id="result" class="container result" style="display:none;">
+		</div>
+		<script src="updateQuiz.js"></script>
+	</body>
+</html>
