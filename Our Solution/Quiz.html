@@ -7,16 +7,22 @@
 	</head>
 	<body>
 		<div id="quizContainer" class="container">
-			<div class="title">Fake News Quiz</div>
-			<div id="question" class="question"></div>
-			<img class ="center" id="questionImage" src="./images/11.png">
-			<label class="option">Real News<input type="radio" name="option" value="1" /> <span id="opt1"></span></label>
-			<label class="option">Fake News<input type="radio" name="option" value="2" /> <span id="opt2"></span></label>
-			<button id="nextButton" class="next-btn" onclick="updatePage()">Next Question</button>
+			<header>
+			<br><br>
+			<div class="title"><strong>Fake News Quiz</strong></div>
+			<p id="score">Score: 0</p>
+			<p id="questionCount">Question 1/8</p>
+			</header>
+			<!----<div id="question" class="question"></div>-->
+			<img class ="center" id="questionImage" src="">
+			<label id="option1" class="option">Real News<input type="button" style="display: none;" name="option" onclick="showAnswer('realNews')" /> <span id="opt1"></span></label>
+			<label id="option2" class="option">Fake News<input type="button" style="display: none;" name="option" onclick="showAnswer('fakeNews')" /> <span id="opt2"></span></label>
+			<button id="nextButton" class="next-btn" onclick="updatePage()"></button>
 			<h3 id =answer></h3>
 		</div>
 		<div id="result" class="container result" style="display:none;">
 		</div>
 		<script src="updateQuiz.js"></script>
+		<script>updateImage()</script>
 	</body>
 </html>
