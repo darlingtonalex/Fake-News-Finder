@@ -2,27 +2,39 @@
 <html>
 	<head>
 		<title>Quiz</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes" />
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+		<script src="Progress Bar/progressbar.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link href="quiz.css" rel="stylesheet">
+		<script src="myProgressBar.js"></script>
 	</head>
 	<body>
+		<div></div>
 		<div id="quizContainer" class="container">
 			<header>
-			<br><br>
 			<div class="title"><strong>Fake News Quiz</strong></div>
 			<p id="score">Score: 0</p>
 			<p id="questionCount">Question 1/8</p>
+			<div class="myProgress" id="myProgress"></div>
 			</header>
-			<!----<div id="question" class="question"></div>-->
 			<img class ="center" id="questionImage" src="">
 			<label id="option1" class="option">Real News<input type="button" style="display: none;" name="option" onclick="showAnswer('realNews')" /> <span id="opt1"></span></label>
 			<label id="option2" class="option">Fake News<input type="button" style="display: none;" name="option" onclick="showAnswer('fakeNews')" /> <span id="opt2"></span></label>
-			<button id="nextButton" class="next-btn" onclick="updatePage()"></button>
+			<button id="nextButton" class="next-btn" onclick="updatePage(),progressBar(circle)"></button>
 			<h3 id =answer></h3>
 		</div>
 		<div id="result" class="container result" style="display:none;">
 		</div>
 		<script src="updateQuiz.js"></script>
+		
 		<script>updateImage()</script>
+
+		<script>circle = new ProgressBar.Line('#myProgress', {
+				color: '#f13737c9',
+				duration: 1000,
+				easing: 'easeInOut'
+			});</script>
+		<script>progressBar(circle)</script>
 	</body>
 </html>

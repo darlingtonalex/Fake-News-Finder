@@ -1,6 +1,4 @@
-header{
-	padding-bottom: 15px;
-}
+
 body{
 	font-family: 'Roboto Slab', serif;
 	background: #6cf;
@@ -8,21 +6,26 @@ body{
 button{
 	font-family: 'Roboto Slab', serif;
 }
+img{
+	display: block;
+	margin: auto;
+	width: 50%;
+}
 .container{
 	/*height: 500px;*/
-	width: 1000px;
+	width: 90%;
 	position: absolute;
 	top:50%;
 	left:50%;
 	transform: translateX(-50%) translateY(-50%);
 	background: rgba(255, 255, 255, 0.5);
-	padding: 20px;
+	padding: 5px;
 	border: 1px solid #08038C;
 	box-shadow: 0 0 8px 3px #fff;
 }
 
 .title{
-	padding-top: 60px;
+	padding-top: 10px;
 	text-align: center;
 	font-size: 36px;
 	text-transform: uppercase;
@@ -39,12 +42,12 @@ button{
 }
 
 .option{
-	width: 470px;
+	width: 49.4%;
 	display: inline-block;
 	padding: 10px 0 10px 15px;
-	vertical-align: middle;
+	vertical-align: top;
 	background: rgba(255, 255, 255, 0.5);
-	margin: 10px 0 10px 10px;
+	margin: 10px auto 0 auto;
 	color: #000000;
 	border-radius: 20px;
 }
@@ -57,7 +60,8 @@ button{
 .next-btn{
 	border: none;
 	outline: none;
-	background: rgba(255, 25, 255, 0.5);
+	vertical-align: top;
+	background: rgba(241, 55, 55, 0.788);
 	width: 100px;
 	height: 35px;
 	border-radius: 20px;
@@ -70,6 +74,28 @@ button{
 	background: #08038C;
 	color: #f6f6f6;
 }
+.start-btn{
+	border: none;
+	outline: none;
+	background: rgba(241, 55, 55, 0.788);
+	width: 100%;
+	height: 2em;
+	border-radius: 20px;
+	cursor: pointer;
+	float: none;
+	display: inline-block;
+	margin: auto;
+	font-size: 50px
+}
+
+.start-btn:hover{
+	background: #08038C;
+	color: #f6f6f6;
+}
+#startButtonContainer{
+	margin:auto;
+	width:50%;
+}
 
 .result{
 	height: 100px;
@@ -81,7 +107,9 @@ button{
 	background: #08038C;
 	color: #000;
 }
-
+.gameOverText{
+	text-align: center;
+}
 
 .center {
 	display: block;
@@ -91,13 +119,17 @@ button{
 }
 
 img {
-	width: auto;
+	width: 55%;
 	height: auto;
-	/*max-height: 300px; */
+
 }
-
-
-
+.myProgress {
+	height: 2%;
+}
+.myProgress > svg {
+	height: 100%;
+	display: block;
+}
 
 
 

@@ -1,7 +1,6 @@
 chosenElement = "11";
 answerDisplayed = false;
 score = 0;
-count = 0;
 alreadyViewed = [];
 
 
@@ -41,16 +40,26 @@ function showAnswer(realOrFake) {
     document.getElementById("nextButton").style.visibility = "visible";
     
     if (chosenElement[0] == "1") {
-        document.getElementById('answer').innerHTML = "This is real news!";
+        
         if (realOrFake == "realNews") {
             updateScore()
+            document.getElementById('answer').innerHTML = "CORRECT - ";
         }
+        else {
+            document.getElementById('answer').innerHTML = "INCORRECT - ";
+        }
+        document.getElementById('answer').innerHTML += "This is real news!";
     }
     else {
-    document.getElementById('answer').innerHTML = "This is fake news!";
-    if (realOrFake == "fakeNews") {
-        updateScore()
-    }
+    
+        if (realOrFake == "fakeNews") {
+            updateScore()
+            document.getElementById('answer').innerHTML = "CORRECT - ";
+        }
+        else {
+            document.getElementById('answer').innerHTML = "INCORRECT - ";
+        }
+        document.getElementById('answer').innerHTML += "This is fake news!";
     }
     document.getElementById('nextButton').innerHTML = "Continue";
 }
@@ -62,5 +71,6 @@ function updateQuestionCount() {
     document.getElementById('questionCount').innerHTML = "Question " + (alreadyViewed.length + 1) + "/8";
 }
 function gameOver(){
+    localStorage.setItem("endScreenScore", score);
     window.location.href = "./endscreen.html";
 }

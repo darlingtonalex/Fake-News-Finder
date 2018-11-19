@@ -12,12 +12,11 @@
 			<header>
 			<div class="title"><strong>Fake News Quiz</strong></div>
 			</header>
-			<div class="gameOverText">
-				<h1><strong>Game Over</strong></h1>
-				<h2 id="score">Score: </h2>
-				<script>document.getElementById('score').innerHTML = "Score: " + localStorage.getItem("endScreenScore");</script>
-				<img src="final_screen_advice.jpeg">
+			<img src="./fake_news_dribble.gif">
+			<div id="startButtonContainer">
+				<br><br>
+				<button id="startButton" class="start-btn" onclick="location.href ='Quiz.html'">Start</button>
 			</div>
-			<button id="restartButton" class="next-btn" onclick="location.href ='Quiz.html'">Restart</button>
-	</body>
+		</div>
+		</body>
 </html>
