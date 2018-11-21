@@ -2,6 +2,7 @@
 body{
 	font-family: 'Roboto Slab', serif;
 	background: #6cf;
+  
 }
 button{
 	font-family: 'Roboto Slab', serif;
@@ -52,6 +53,11 @@ img{
 	border-radius: 20px;
 }
 
+@media only screen and (max-width: 600px) {
+	.option{
+		width: 49%
+	}
+}
 .option:hover{
 	background: #08038C;
 	color: #f6f6f6;
@@ -84,6 +90,7 @@ img{
 	cursor: pointer;
 	float: none;
 	display: inline-block;
+	text-align: center;
 	margin: auto;
 	font-size: 50px
 }
@@ -93,6 +100,7 @@ img{
 	color: #f6f6f6;
 }
 #startButtonContainer{
+	text-align: center;
 	margin:auto;
 	width:50%;
 }
@@ -115,12 +123,20 @@ img{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 50%;
+	width: 45%;
+}
+@media only screen and (max-width: 600px) {
+	.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 90%;
+	}
 }
 
 img {
-	width: 55%;
-	height: auto;
+	max-height: 100%;
+	max-width: 100%;
 
 }
 .myProgress {

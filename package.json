@@ -1,0 +1,24 @@
+{
+  "name": "final-project",
+  "version": "1.0.0",
+  "description": "Final Project for SDLC module",
+  "main": "index.js",
+  "dependencies": {
+    "progressbar.js": "^1.0.1",
+    "score-board": "git://github.com/tableflip/score-board.git"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darlingtonalex/Fake-News-Finder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darlingtonalex/Fake-News-Finder/issues"
+  },
+  "homepage": "https://github.com/darlingtonalex/Fake-News-Finder#readme"
+}

@@ -13,12 +13,15 @@
 		<div></div>
 		<div id="quizContainer" class="container">
 			<header>
+			<div class="myProgress" id="myProgress"></div>
 			<div class="title"><strong>Fake News Quiz</strong></div>
 			<p id="score">Score: 0</p>
 			<p id="questionCount">Question 1/8</p>
-			<div class="myProgress" id="myProgress"></div>
+			
 			</header>
+			<div class="imgcontainer">
 			<img class ="center" id="questionImage" src="">
+			</div>
 			<label id="option1" class="option">Real News<input type="button" style="display: none;" name="option" onclick="showAnswer('realNews')" /> <span id="opt1"></span></label>
 			<label id="option2" class="option">Fake News<input type="button" style="display: none;" name="option" onclick="showAnswer('fakeNews')" /> <span id="opt2"></span></label>
 			<button id="nextButton" class="next-btn" onclick="updatePage(),progressBar(circle)"></button>

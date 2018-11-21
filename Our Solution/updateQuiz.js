@@ -3,7 +3,6 @@ answerDisplayed = false;
 score = 0;
 alreadyViewed = [];
 
-
 function updatePage() {    
     if (answerDisplayed == true) {
         updateImage();
@@ -15,12 +14,7 @@ function updatePage() {
 }
 
 function updateImage() {
-    updateQuestionCount()
-    answerDisplayed = false;
-    document.getElementById("nextButton").style.visibility = "hidden";
-    document.getElementById("option1").style.visibility = "visible";
-    document.getElementById("option2").style.visibility = "visible";
-    document.getElementById('answer').innerHTML = "";
+    document.getElementById('questionImage').style.visibility = "hidden";
     if (alreadyViewed.length == 8){
         gameOver();
         return
@@ -30,8 +24,18 @@ function updateImage() {
     }
     alreadyViewed.push(chosenElement);
     document.getElementById("nextButton").style.visibility = "hidden";
-    document.getElementById('questionImage').src='./images/' + chosenElement + '.png'; 
+    document.getElementById('questionImage').src='./images/' + chosenElement + '.jpg'; 
     document.getElementById('nextButton').innerHTML = "Get Answer";
+
+
+    answerDisplayed = false;
+    document.getElementById("nextButton").style.visibility = "hidden";
+    document.getElementById("option1").style.visibility = "visible";
+    document.getElementById("option2").style.visibility = "visible";
+    document.getElementById('answer').innerHTML = "";    
+    updateQuestionCount();
+    document.getElementById('questionImage').style.visibility = "visible";
+
 }
 function showAnswer(realOrFake) {
     answerDisplayed = true;
@@ -68,7 +72,9 @@ function updateScore() {
     document.getElementById('score').innerHTML = "Score: " + score;
 }
 function updateQuestionCount() {
-    document.getElementById('questionCount').innerHTML = "Question " + (alreadyViewed.length + 1) + "/8";
+    if ((alreadyViewed.length) <= 8) {
+        document.getElementById('questionCount').innerHTML = "Question " + (alreadyViewed.length) + "/8";
+    }
 }
 function gameOver(){
     localStorage.setItem("endScreenScore", score);

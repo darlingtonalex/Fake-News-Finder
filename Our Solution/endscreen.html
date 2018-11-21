@@ -15,8 +15,8 @@
 			<div class="gameOverText">
 				<h1><strong>Game Over</strong></h1>
 				<h2 id="score">Score: </h2>
-				<script>document.getElementById('score').innerHTML = "Score: " + localStorage.getItem("endScreenScore");</script>
-				<img src="final_screen_advice.jpeg">
+				<script>document.getElementById('score').innerHTML = "Score: " + localStorage.getItem("endScreenScore") + "/8";</script>
+				<img class="center" src="final_screen_advice.jpeg">
 			</div>
 			<button id="restartButton" class="next-btn" onclick="location.href ='Quiz.html'">Restart</button>
 	</body>
